@@ -9,7 +9,7 @@ const server = http.createServer(function (req, res) {
         var data = replace.replace("template-product.html" , req.url.split("=")[1]);
         res.write(data);
     }
-    else if (req.url == "/overveiw" || req.url == "/") {
+    else if (req.url == "/overview" || req.url == "/") {
         res.writeHead(200, { "content-type": "text/html" });
         var overveiw = fs.readFileSync("./templates/template-overview.html").toString();
         var data = " ";
